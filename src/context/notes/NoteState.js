@@ -30,7 +30,7 @@ const NoteState = (props) => {
         "Content-Type": "application/json",
         "auth-token": localStorage.getItem('token')
       },
-      body: JSON.stringify(title, description, tag) // body data type must match "Content-Type" header
+      body: JSON.stringify({"title":title, "description":description, "tag":tag}) // body data type must match "Content-Type" header
     });
     const note =await response.json();
   
